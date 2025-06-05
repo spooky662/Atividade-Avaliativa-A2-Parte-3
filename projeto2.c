@@ -4,12 +4,12 @@
 
 #define V 6  // Número de estações
 
-// Nomes das estações
+// Nomes das estacoes
 const char* estacoes[V] = {
     "Centro", "Estacao Norte", "Estacao Leste", "Estacao Sul", "Estacao Oeste", "Terminal Rodoviario"
 };
 
-// Função para encontrar o vértice com a menor distância ainda não visitado
+// Funcao para encontrar o vertice com a menor distancia ainda nao visitado
 int minDistancia(int dist[], int visitado[]) {
     int min = INT_MAX, min_index = -1;
 
@@ -33,13 +33,13 @@ void imprimirCaminho(int anterior[], int destino) {
     printf(" -> %s", estacoes[destino]);
 }
 
-// Função que implementa o algoritmo de Dijkstra com exibição do caminho
+// Funcao que implementa o algoritmo de Dijkstra com exibicao do caminho
 void dijkstra(int grafo[V][V], int origem, int destino) {
     int dist[V];         // dist[i] armazena a menor distância de origem até i
     int visitado[V];     // visitado[i] é verdadeiro se o vértice já foi incluído
     int anterior[V];     // anterior[i] armazena o vértice anterior no caminho até i
 
-    // Inicializa todas as distâncias como infinito e os vértices como não visitados
+    // Inicializa todas as distancias como infinito e os vertices como nao visitados
     for (int i = 0; i < V; i++) {
         dist[i] = INT_MAX;
         visitado[i] = 0;
@@ -82,7 +82,7 @@ void mostrarMenuEstacoes() {
 }
 
 int main() {
-    // Grafo representando os tempos médios entre estações
+    // Grafo representando os tempos medios entre estacoes
     int grafo[V][V] = {
         // C  N  L  S  O  T
         { 0, 7, 9, 0, 0,14}, // Centro
@@ -95,7 +95,7 @@ int main() {
 
     int origem, destino;
 
-    printf("=== Sistema Inteligente de Rotas para Transporte Publico ===\n");
+    printf("=== Sistema de Rotas para Transporte Publico ===\n");
     mostrarMenuEstacoes();
 
     printf("\nEscolha a estacao de origem (0 a %d): ", V - 1);
