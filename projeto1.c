@@ -26,11 +26,11 @@ int labirinto[LINHAS][COLUNAS] = {
 int visitado[LINHAS][COLUNAS];
 Ponto antecessor[LINHAS][COLUNAS];
 
-// Direções: cima, baixo, esquerda, direita
+// Direcoes: cima, baixo, esquerda, direita
 int dx[] = {-1, 1, 0, 0};
 int dy[] = {0, 0, -1, 1};
 
-// Funções para fila (BFS)
+// Funcoes para fila (BFS)
 void inicializarFila(Fila* f) {
     f->frente = -1;
     f->tras = -1;
@@ -54,7 +54,7 @@ Ponto desenfileirar(Fila* f) {
     return p;
 }
 
-// Verifica se posição é válida
+// Verifica se posicao e valida
 int valido(int x, int y) {
     return x >= 0 && x < LINHAS && y >= 0 && y < COLUNAS &&
            labirinto[x][y] == 1 && !visitado[x][y];
@@ -73,7 +73,7 @@ void mostrarCaminho(Ponto inicio, Ponto fim) {
         }
     }
 
-    // Reconstrói o caminho
+    // Reconstroi o caminho
     Ponto atual = fim;
     while (!(atual.x == inicio.x && atual.y == inicio.y)) {
         visual[atual.x][atual.y] = '*';
@@ -92,7 +92,7 @@ void mostrarCaminho(Ponto inicio, Ponto fim) {
     }
 }
 
-// ================= BFS =================
+// BFS 
 void BFS(Ponto inicio, Ponto fim) {
     Fila f;
     inicializarFila(&f);
@@ -119,10 +119,10 @@ void BFS(Ponto inicio, Ponto fim) {
         }
     }
 
-    printf("Caminho não encontrado.\n");
+    printf("Caminho nao encontrado.\n");
 }
 
-// ================= DFS =================
+// DFS 
 int encontrouDFS = 0;
 
 void DFS(Ponto atual, Ponto fim) {
@@ -146,7 +146,7 @@ void DFS(Ponto atual, Ponto fim) {
     }
 }
 
-// ================= Menu Principal =================
+// Menu Principal 
 void limparVisitados() {
     for (int i = 0; i < LINHAS; i++)
         for (int j = 0; j < COLUNAS; j++)
@@ -158,7 +158,7 @@ int main() {
     Ponto fim = {2, 3};     // 'E'
 
     int escolha;
-    printf("=== Navegação em Labirintos ===\n");
+    printf("=== Navegacao em Labirintos ===\n");
     printf("1 - Busca em Largura (BFS)\n");
     printf("2 - Busca em Profundidade (DFS)\n");
     printf("Escolha: ");
@@ -177,9 +177,9 @@ int main() {
         if (encontrouDFS)
             mostrarCaminho(inicio, fim);
         else
-            printf("Caminho não encontrado.\n");
+            printf("Caminho nao encontrado.\n");
     } else {
-        printf("Opção inválida.\n");
+        printf("Opcao invalida.\n");
     }
 
     return 0;
