@@ -2,7 +2,7 @@
 
 Projeto 1: Sistema de Navegação para Labirintos (Busca em Largura e Profundidade)
 
-Estrutura de Dados (Valor: 1 ponto)
+Estrutura de Dados 
 
 Representar o labirinto como um grafo usando uma matriz de adjacência ou uma lista de adjacência.
 Cada nó do grafo representa uma posição no labirinto.
@@ -18,7 +18,7 @@ Utilizar uma pilha (recursão ou estrutura explícita) para percorrer os caminho
 Útil para explorar completamente todas as possibilidades.
  
 
-Projeto 2: Sistema Inteligente de Rotas para Transporte Público (Valor: 1 ponto)
+Projeto 2: Sistema Inteligente de Rotas para Transporte Público 
 
 Descrição: Desenvolver um sistema que auxilie passageiros a encontrar o trajeto mais rápido dentro de uma rede de transporte público (ônibus, metrô ou trem). O algoritmo de Dijkstra será utilizado para calcular o caminho mais curto entre duas estações ou pontos de parada.
 
